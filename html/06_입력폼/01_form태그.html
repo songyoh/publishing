@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="https://search.naver.com/search.naver" method="GET">
+            <!--form태그만으로는 아무것도 입력받지 못하고
+            input 등의 태그가 필요합니다. action은 목적지, name은 수취인-->
+            <input type="text" name="query">
+            <input type="text" name="quer">
+            <button>검색</button>
+        </form>
+        <form action="https://www.google.com/search" method="post">
+            <!--form태그만으로는 아무것도 입력받지 못하고
+            input 등의 태그가 필요합니다. action은 목적지, name은 수취인, post 비밀번호등 개인정보를 숨겨서 보내는 방식-->
+            <input type="text" name="query">
+            <input type="text" name="quer">
+            <button>검색</button>
+        </form>
+    </body>
+</html>

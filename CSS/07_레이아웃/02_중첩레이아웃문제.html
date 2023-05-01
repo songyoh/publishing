@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+        <style>
+            .container1{
+                border:3px red solid;
+                width: 630px;
+                padding: 20px;
+                /*해결책2
+                overflow: hidden;*/
+            }
+            .box{
+                width: 200px;
+                height: 100px;
+                border: 3px solid green;
+                background: yellowgreen;
+                border-radius: 20px;/*모서리 둥글게 적용*/
+                float: left;
+            }
+            /* 해결책1: vbox에 clear:both를 걸어서 해제
+            .vbox{
+                clear: both; /*float이 풀린다
+            }*/
+
+            /*해결책3 after를 이용한 빈 가상 선택자를 만들고
+            block 형태로 화면에 출력하고, 생긴 가상태그에 clear:both적용*/
+            .container1::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- .container1>.box*3 -->
+        <div class="container1">
+            <div class="box">완두콩1</div>
+            <div class="box">완두콩2</div>
+            <div class="box">완두콩3</div>
+            <!--<div class="vbox"></div> 용도는 없으나 float 해제목적으로 선언(해결책1)-->
+        </div>
+    </body>
+</html>

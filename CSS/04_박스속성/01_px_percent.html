@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+        <style>
+            div{ /*칸 설정*/
+                border: 2px solid black;
+            }
+            .root{ /*너비설정:전체기준의 60%*/
+                width: 60%;
+            }
+            .parent{ /*부모가 갖는(root의) 최대 너비의 50%*/
+                width: 50%;
+            }
+            .child{
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- .root>.parent>.child{Child$}*2 -->
+        <!-- 요소 설정이 없으면 div로 기본설정됨-->
+        <div class="root">Root
+            <div class="parent">Parent
+                <div class="child">Child1</div>
+                <div class="child">Child2</div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+        <style>
+            div.box{
+                border: 1px solid black;
+                width: 100px;
+                height: 100px;
+                /*정렬방향 설정*/
+                float: right;
+            }
+            div.wrap {/*wrap 감싸다*/
+                border: 1px solid blueviolet;
+                width: 400px;
+                height: 400px;
+            }
+            #second{
+                float:left;
+                height: 200px;
+            }
+            p{
+                /*float 적용 해제*/
+                clear: both;/*left와 right 기준중 더 긴거 기준으로 다음줄로 내려줌 */
+            }
+        </style>
+    </head>
+    <body>
+        <!-- .wrap>box*3 -->
+        <div class="wrap">wrap
+            <div class="box">1</div>
+            <div class="box" id="second">2</div>
+            <div class="box" id="third">3</div>
+            <p>가나다라마바사아자차카타파하</p>
+        </div>
+    </body>
+</html>
